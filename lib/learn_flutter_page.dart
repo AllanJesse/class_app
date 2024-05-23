@@ -9,8 +9,11 @@ class LearnFlutterPage extends StatefulWidget {
 }
 
 class _LearnFlutterPageState extends State<LearnFlutterPage> {
+<<<<<<< HEAD
   bool isSwitch = false;
   bool? isCheckbox = false;
+=======
+>>>>>>> origin/master
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +27,7 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           icon: const Icon(Icons.arrow_back_ios),
         ),
       ),
+<<<<<<< HEAD
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -101,6 +105,68 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             Image.network('https://cdn.motor1.com/images/mgl/zx98j6/s1/2024-vw-tiguan-rendering.jpg')
           ],
         ),
+=======
+      body: Column(
+        children: [
+          Image.asset('images/einstein.jpeg'),
+          const SizedBox(
+            width: 20,
+            height: 10,
+          ),
+          const Divider(
+            color: Colors.black,
+          ),
+          Container(
+            margin: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
+            color: Colors.blueGrey,
+            width: double.infinity,
+            child: const Center(
+              child: Text(
+                'This is an Image',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              debugPrint('Elevated Button');
+            },
+            child: const Text('Elevated Button'),
+          ),
+          OutlinedButton(
+            onPressed: () {
+              debugPrint('Outlined Button');
+            },
+            child: const Text('Outlined Button'),
+          ),
+          TextButton(
+            onPressed: () {
+              debugPrint('Text Button');
+            },
+            child: const Text('Text Button'),
+          ),
+          GestureDetector(
+            onTap: (){
+              debugPrint('This is a row');
+            },
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(
+                  Icons.local_fire_department,
+                  color: Colors.blue,
+                ),
+                Text('Row Widget'),
+                Icon(
+                  Icons.local_fire_department,
+                  color: Colors.red,
+                ),
+              ],
+            ),
+          ),
+        ],
+>>>>>>> origin/master
       ),
     );
   }
